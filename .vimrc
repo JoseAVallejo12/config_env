@@ -45,6 +45,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'yggdroot/indentline'
+"Plugin 'klen/python-mode'
 call vundle#end()            " required
 filetype plugin indent on		"requerid
 "filetype plugin on
