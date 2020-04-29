@@ -4,7 +4,7 @@
 #*********INSTALL TOOL BASIC*****************
 
 #********Install Shell ZSH*******************
-
+sudo apt install zsh
 #********Install pyton ans pip for WSL*******************
 sudo apt update && upgrade
 sudo apt install python3 python3-pip ipython3
