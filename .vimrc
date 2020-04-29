@@ -45,7 +45,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'yggdroot/indentline'
-"Plugin 'klen/python-mode'
 call vundle#end()            " required
 filetype plugin indent on		"requerid
 "filetype plugin on
@@ -80,5 +79,5 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 			
 colorscheme Benokai
-let g:indentLine_char = '▌'
+"let g:indentLine_char = '▌'
 
