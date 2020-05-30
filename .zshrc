@@ -7,13 +7,12 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:/usr/lib/python3/dist-packages
 
  #Path to your oh-my-zsh installation.
 
 export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
+export PC="/mnt/c/Users/JoseV/Documents"
+ #Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
@@ -105,6 +104,7 @@ export LANG=en_US.UTF-8
 alias k="clear"
 alias d="mkdir -m 755 carpeta"
 alias gccw="gcc -Wall -Wextra -Werror -pedantic -std=c90 *.c -o hsh"
+alias git_login="git config --global credential.helper store" #safe credentiales for github acount
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
