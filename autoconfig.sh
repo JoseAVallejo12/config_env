@@ -28,6 +28,7 @@ vim +PluginInstall +qall
 #*****theme powerline10k for oh_my_zsh*********
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 ###Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc.########
+###use p10k configure for open menu options ####
 
 #autocomplete options with oh_my_zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
