@@ -7,7 +7,9 @@
 sudo apt install zsh
 #********Install pyton an pip for WSL*******************
 sudo apt update && upgrade
-sudo apt-get install pip3
+#install pip3
+sudo apt-get install python3-pip
+#install pep8 estyle python3
 sudo pip3 install pep8==1.7.0
 #**********instal GIT*************************
 sudo apt install git
