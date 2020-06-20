@@ -5,8 +5,13 @@ filetype off					"requerid
 "star Config for plugin airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tmuxline#enabled = 0
+let g:ale_completion_enabled = 1
 let g:airline_powerline_fonts = 1
-
+" ****ALE Conofig linters and fixers
+let g:ale_fixers = {'*':['remove_trailing_lines', 'trim_whitespace'], 'python':['autopep8']}
+let g:ale_linters = {'python':['pydocstyle', 'flake8', 'pep8'], 'C':['gcc']} " flack8, bandit, mypy
+let g:ale_sign_column_always = 1
+let g:ale_fix_on_save = 1
 "Mostrar caracter al final de la linea o caracter invisible
 set lcs=tab:·\ ,trail:·,eol:¬,nbsp:_ "configura los caracteres de entorno
 set list				"Resalta los resultados de las busquedas
@@ -22,6 +27,7 @@ set mouse=a "allow scroll whit mause
 set smartindent
 set wildmenu		"enebla menu in the estatus bar
 set hlsearch
+set complete+=kspell
 "set expandtab     "convert tab >> in espaces normal is necesary for plugin Indenline
 
 map <C-n> :NERDTreeToggle<CR>
@@ -45,6 +51,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'yggdroot/indentline'
+Plugin 'vim-scripts/AutoComplPop'
+Plugin 'w0rp/ale'
 call vundle#end()            " required
 filetype plugin indent on		"requerid
 "filetype plugin on
@@ -78,6 +86,5 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 			
-colorscheme Benokai
+colorscheme vimbrant
 "let g:indentLine_char = '▌'
-
