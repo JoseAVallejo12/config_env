@@ -53,6 +53,7 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'yggdroot/indentline'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'w0rp/ale'
+Plugin 'christoomey/vim-tmux-navigator'
 call vundle#end()            " required
 filetype plugin indent on		"requerid
 "filetype plugin on
@@ -80,11 +81,12 @@ let g:syntastic_javascript_checkers = ['jscs']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let	NERDTreeQuitOnOpen=1
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-			
+
 colorscheme vimbrant
 "let g:indentLine_char = '▌'
