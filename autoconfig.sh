@@ -1,10 +1,7 @@
 #!/bin/bash
-
 #********************************************
 #*********INSTALL TOOL BASIC*****************
 
-#********Install Shell ZSH*******************
-sudo apt install zsh
 #********Install pyton an pip for WSL*******************
 sudo apt update && upgrade
 #install pip3
@@ -17,6 +14,8 @@ sudo apt install git
 #***********install VALGRIND******************
 sudo apt-get install valgrind
 
+#********Install Shell ZSH*******************
+sudo apt install zsh
 #*********************************************
 #**********DOWN LOAD RECURS*******************
 
