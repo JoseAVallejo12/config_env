@@ -7,6 +7,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tmuxline#enabled = 0
 let g:ale_completion_enabled = 1
 let g:airline_powerline_fonts = 1
+" Config path for doq string generator with plugin pydocstyle
+let g:pydocstring_doq_path = "/usr/local/bin/doq"
+"let g:pydocstring_templates_path = "$HOME/config_env/templete_pydocstring.txt"
+let g:pydocstring_formatter = 'google' "set built-in formatter(Sphinx, Numpy, Google).'
 " ****ALE Conofig linters and fixers
 let g:ale_fixers = {'*':['remove_trailing_lines', 'trim_whitespace'], 'python':['autopep8']}
 let g:ale_linters = {'python':['pydocstyle', 'flake8', 'pep8'], 'C':['gcc']} " flack8, bandit, mypy
@@ -51,6 +55,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'yggdroot/indentline'
+Plugin 'heavenshell/vim-pydocstring'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'w0rp/ale'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -77,6 +82,7 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 nmap <F5> :set invrelativenumber<CR>
 imap <F5> <ESC>:set invrelativenumber<CR>a
 nmap <F4> :%s/\s\+$//e<CR>
+nmap <silent> <C-_> <Plug>(pydocstring)
 let g:syntastic_javascript_checkers = ['jscs']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
