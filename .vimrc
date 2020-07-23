@@ -12,7 +12,7 @@ let g:pydocstring_doq_path = "/usr/local/bin/doq"
 "let g:pydocstring_templates_path = "$HOME/config_env/templete_pydocstring.txt"
 let g:pydocstring_formatter = 'google' "set built-in formatter(Sphinx, Numpy, Google).'
 " ****ALE Conofig linters and fixers
-let g:ale_fixers = {'*':['remove_trailing_lines', 'trim_whitespace'], 'python':['autopep8']}
+let g:ale_fixers = {'*':['remove_trailing_lines', 'trim_whitespace'], 'python':['autopep8'], 'C':['gcc']}
 let g:ale_linters = {'python':['pydocstyle', 'flake8', 'pep8'], 'C':['gcc']} " flack8, bandit, mypy
 let g:ale_sign_column_always = 1
 let g:ale_fix_on_save = 1
@@ -59,6 +59,7 @@ Plugin 'heavenshell/vim-pydocstring'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'w0rp/ale'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'cohama/lexima.vim'
 call vundle#end()            " required
 filetype plugin indent on		"requerid
 "filetype plugin on
