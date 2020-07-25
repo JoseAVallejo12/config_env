@@ -2,6 +2,9 @@ syntax on
 set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off					"requerid
+" start Config for lexima plugin that auto close brackets...
+"let g:lexima_enable_newline_rules = 0
+"let g:lexima_enable_endwise_rules = 0
 "star Config for plugin airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tmuxline#enabled = 0
@@ -12,7 +15,7 @@ let g:pydocstring_doq_path = "/usr/local/bin/doq"
 "let g:pydocstring_templates_path = "$HOME/config_env/templete_pydocstring.txt"
 let g:pydocstring_formatter = 'google' "set built-in formatter(Sphinx, Numpy, Google).'
 " ****ALE Conofig linters and fixers
-let g:ale_fixers = {'*':['remove_trailing_lines', 'trim_whitespace'], 'python':['autopep8'], 'C':['gcc']}
+let g:ale_fixers = {'*':['remove_trailing_lines', 'trim_whitespace'], 'python':['autopep8']}
 let g:ale_linters = {'python':['pydocstyle', 'flake8', 'pep8'], 'C':['gcc']} " flack8, bandit, mypy
 let g:ale_sign_column_always = 1
 let g:ale_fix_on_save = 1
@@ -52,14 +55,16 @@ Plugin 'tpope/vim-fugitive'
 " " All of your Plugins must be added before the following line
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
+"Plugin 'cohama/lexima.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'yggdroot/indentline'
 Plugin 'heavenshell/vim-pydocstring'
 Plugin 'vim-scripts/AutoComplPop'
+Plugin 'ryanoasis/vim-devicons'
 Plugin 'w0rp/ale'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'cohama/lexima.vim'
+Plugin 'AutoClose'
 call vundle#end()            " required
 filetype plugin indent on		"requerid
 "filetype plugin on
@@ -84,6 +89,7 @@ nmap <F5> :set invrelativenumber<CR>
 imap <F5> <ESC>:set invrelativenumber<CR>a
 nmap <F4> :%s/\s\+$//e<CR>
 nmap <silent> <C-_> <Plug>(pydocstring)
+nmap <silent> ,/ :nohlsearch<CR>
 let g:syntastic_javascript_checkers = ['jscs']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -95,5 +101,5 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-colorscheme vimbrant
+colorscheme molokai_dark
 "let g:indentLine_char = '▌'
