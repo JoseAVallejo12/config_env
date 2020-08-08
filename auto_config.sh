@@ -31,6 +31,13 @@ function _pep8(){
 	sudo pip3 install pep8==1.7.0
 	end_msn "pep8"
 }
+#Funtion for install pydocstyle
+function _pydocstyle(){
+	initial_msn "pydocstyle"
+	sudo apt update
+	sudo pip install pydocstyle
+	end_msn "pydocstyle"
+}
 
 #Funtion for install pip3
 function _pip3(){
