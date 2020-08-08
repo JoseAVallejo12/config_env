@@ -56,6 +56,14 @@ function _gcc(){
 	end_msn "gcc"
 }
 
+# funtion for install flake8
+function _flake8 (){
+	initial_msn "flake8"
+	sudo apt-get update
+	sudo apt-get install -y flake8
+	end_msn "flake8"
+}
+
 #Funtion for install git
 function _git(){
 	initial_msn "git"
