@@ -63,8 +63,9 @@ Plugin 'heavenshell/vim-pydocstring'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'w0rp/ale'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'AutoClose'
+"Plugin 'christoomey/vim-tmux-navigator'
+"Plugin 'AutoClose'
+Plugin 'ekalinin/dockerfile.vim'
 call vundle#end()            " required
 filetype plugin indent on		"requerid
 "filetype plugin on
@@ -101,5 +102,5 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-colorscheme molokai_dark
+colorscheme 256-jungle
 "let g:indentLine_char = '▌'
