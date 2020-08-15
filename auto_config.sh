@@ -31,6 +31,14 @@ function _pep8(){
 	sudo pip3 install pep8==1.7.0
 	end_msn "pep8"
 }
+#Funtion for install autopep8
+function _autopep8(){
+	initial_msn "pydocstyle"
+	sudo apt update
+	# pydocstyle will be installing too
+	pip install --upgrade autopep8
+	end_msn "pydocstyle"
+}
 
 #Funtion for install pip3
 function _pip3(){
@@ -54,6 +62,14 @@ function _gcc(){
 	sudo apt update
 	sudo apt-get -y install build-essential
 	end_msn "gcc"
+}
+
+# funtion for install flake8
+function _flake8 (){
+	initial_msn "flake8"
+	sudo apt-get update
+	sudo apt-get install -y flake8
+	end_msn "flake8"
 }
 
 #Funtion for install git
